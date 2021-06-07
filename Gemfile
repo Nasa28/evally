@@ -5,26 +5,26 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
-gem 'rails', '~> 6.0.3.4'
-gem 'pg', '~> 1.1', '>= 1.1.3'
-gem 'puma', '~> 4.3'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
+gem 'rails', '~> 6.0.3.7'
+gem 'pg', '~> 1.2.3'
+gem 'puma', '~> 5.3.2'
+gem 'sass-rails', '~> 6.0.0'
+gem 'uglifier', '~> 4.2.0'
 gem 'webpacker'
-gem 'rack-cors', '~> 1.0', '>= 1.0.2'
-gem 'bootsnap', '>= 1.1.0', require: false
-gem 'haml', '~> 5.1'
+gem 'rack-cors', '~> 1.1.1'
+gem 'bootsnap', '~> 1.4.4', require: false
+gem 'haml', '~> 5.2.1'
 gem 'blueprinter', '~> 0.22.0'
-gem 'pundit', '~> 2.1'
-gem 'devise', '~> 4.7'
-gem 'devise_invitable', '~> 2.0.0'
-gem 'jwt', '~> 2.2'
+gem 'pundit', '~> 2.1.0'
+gem 'devise', '~> 4.8.0'
+gem 'devise_invitable', '~> 2.0.5'
+gem 'jwt', '~> 2.2.3'
 gem 'faraday'
-gem 'redis-namespace', '~> 1.7'
-gem 'sidekiq', '~> 6.0.7'
-gem 'kaminari', '~> 1.2'
+gem 'redis-namespace', '~> 1.8.1'
+gem 'sidekiq', '~> 6.2.1'
+gem 'kaminari', '~> 1.2.1'
 gem 'pg_search', '~> 2.3.5'
-gem 'whenever', require: false
+gem 'whenever', '~> 1.0.0', require: false
 
 group :development, :test do
   gem 'better_errors'
