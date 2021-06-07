@@ -7,6 +7,8 @@ class ErrorResponderService < StandardError
     @identifier = identifier
     @status = status
     @details = details
+
+    super('Custom Error')
   end
 
   def translated_payload

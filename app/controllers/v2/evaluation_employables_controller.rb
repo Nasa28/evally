@@ -92,7 +92,7 @@ module V2
 
     def update_params
       params.require(:evaluation).permit(
-        :state, :next_evaluation_on, sections: [:id, skills: %i[name value needToImprove]]
+        :state, :next_evaluation_on, sections: [:id, { skills: %i[name value needToImprove] }]
       )
     end
   end

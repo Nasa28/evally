@@ -52,7 +52,7 @@ module V2
       end
 
       def target_params
-        { employees: %w[Employee employees], recruits: %w[Recruit recruits] }.dig(@target)
+        { employees: %w[Employee employees], recruits: %w[Recruit recruits] }[@target]
       end
 
       def verified_target?

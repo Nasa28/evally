@@ -10,7 +10,7 @@ gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 5.3.2'
 gem 'sass-rails', '~> 6.0.0'
 gem 'uglifier', '~> 4.2.0'
-gem 'webpacker'
+gem 'webpacker', '~> 5.4.0'
 gem 'rack-cors', '~> 1.1.1'
 gem 'bootsnap', '~> 1.4.4', require: false
 gem 'haml', '~> 5.2.1'
@@ -29,20 +29,19 @@ gem 'whenever', '~> 1.0.0', require: false
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'brakeman', '~> 4.3.1', require: false
+  gem 'brakeman', require: false
   gem 'bullet'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'cypress-on-rails', '~> 1.5'
-  gem 'factory_bot_rails', '~> 4.11'
-  gem 'faker', '~> 1.9.1'
-  gem 'json_spec', '~> 1.1'
-  gem 'pry-rails', '~> 0.3.9'
-  gem 'rspec-rails', '~> 3.8'
-  gem 'shoulda-matchers', '~> 4.3.0'
-  gem 'simplecov', '~> 0.16.1'
-  gem 'rubocop', '~> 0.80.0', require: false
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'json_spec'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
+  gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
-  gem 'travis', '1.8.10'
+  gem 'travis'
   gem 'webmock'
 end
 
@@ -60,5 +59,5 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner', '~> 1.8'
+  gem 'database_cleaner'
 end

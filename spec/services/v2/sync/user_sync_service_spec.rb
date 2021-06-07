@@ -18,8 +18,7 @@ RSpec.describe V2::Sync::UserSyncService do
             'Accept' => 'application/json',
             'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
             'Content-Type' => 'application/json',
-            'Token' => JwtService.encode(user),
-            'User-Agent' => 'Faraday v0.17.3'
+            'Token' => JwtService.encode(user)
           }
         )
         .to_return(status: 204, body: '', headers: {})

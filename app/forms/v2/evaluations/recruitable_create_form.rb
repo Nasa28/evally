@@ -28,8 +28,8 @@ module V2
       def build_draft
         @draft = recruit.evaluations.build(
           state: :draft,
-          recruit_document_id: @params.dig('recruit_document_id'),
-          position: @params.dig('position') || 'Unknown',
+          recruit_document_id: @params['recruit_document_id'],
+          position: @params.fetch('position', 'Unknown'),
           template_name: template.name,
           sections_attributes: sections
         )
