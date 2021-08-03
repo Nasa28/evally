@@ -14,11 +14,11 @@ export const alreadyAuthenticatedGuard = (_to, _from, next) => {
 }
 
 export const authenticationGuard = (_to, _from, next) => {
+  localStorage.setItem('ev411y_r3d1r3ct', window.location.pathname)
+
   if (localStorage.getItem('ev411y_t0k3n')) next()
   else {
     notifyUnauthorizedAction()
-    localStorage.setItem('ev411y_r3d1r3ct', window.location.pathname)
-
     next({ name: 'login_path' })
   }
 }
