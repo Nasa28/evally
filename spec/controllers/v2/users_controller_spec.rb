@@ -23,6 +23,8 @@ RSpec.describe V2::UsersController, type: :controller do
 
     context 'when authorized' do
       it 'responds with empty users' do
+        FactoryBot.create(:user)
+
         sign_in admin
         get :index
 
@@ -51,7 +53,7 @@ RSpec.describe V2::UsersController, type: :controller do
 
     context 'when authorized' do
       it 'responds with empty users' do
-        FactoryBot.create(:user, status: 'inactive')
+        FactoryBot.create(:user, status: 'inactive', organization: admin.organization)
 
         sign_in admin
         get :active
@@ -94,7 +96,7 @@ RSpec.describe V2::UsersController, type: :controller do
 
     context 'when authorized' do
       it 'responds with updated user' do
-        user = FactoryBot.create(:user, first_name: 'Rob')
+        user = FactoryBot.create(:user, first_name: 'Rob', organization: admin.organization)
 
         params = {
           id: user.id,
@@ -113,7 +115,7 @@ RSpec.describe V2::UsersController, type: :controller do
       end
 
       it 'perform background job for synchronization' do
-        user = FactoryBot.create(:user, first_name: 'Rob')
+        user = FactoryBot.create(:user, first_name: 'Rob', organization: admin.organization)
 
         params = {
           id: user.id,
@@ -131,7 +133,7 @@ RSpec.describe V2::UsersController, type: :controller do
       end
 
       it 'responds with validation error' do
-        user = FactoryBot.create(:user)
+        user = FactoryBot.create(:user, organization: admin.organization)
 
         params = {
           id: user.id,

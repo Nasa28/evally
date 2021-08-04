@@ -6,13 +6,13 @@ module V2
     before_action :authorize_collection!
 
     def index
-      presenter = V2::Users::IndexPresenter.new(User.all, params: table_params)
+      presenter = V2::Users::IndexPresenter.new(users, params: table_params)
 
       render json: V2::Users::IndexView.render(presenter), status: :ok
     end
 
     def active
-      render json: V2::Users::Serializer.render(User.active.order(first_name: :asc)), status: :ok
+      render json: V2::Users::Serializer.render(users.active.order(first_name: :asc)), status: :ok
     end
 
     def update
@@ -27,8 +27,12 @@ module V2
       authorize [:v2, User]
     end
 
+    def users
+      @users ||= current_organization.users
+    end
+
     def user
-      @user ||= User.find_by(id: params[:id])
+      @user ||= users.find_by(id: params[:id])
       raise ErrorResponderService.new(:record_not_found, 404) unless @user
 
       @user

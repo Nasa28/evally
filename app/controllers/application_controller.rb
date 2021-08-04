@@ -8,9 +8,15 @@ class ApplicationController < ActionController::Base
   rescue_from ErrorResponderService, with: :render_error_response
   rescue_from Pundit::NotAuthorizedError, with: :forbidden_response
 
+  helper_method :current_organization
+
   before_action :set_locale
 
   private
+
+  def current_organization
+    @current_organization ||= current_user&.organization
+  end
 
   def render_error_response(error)
     render json: V2::Errors::Serializer.render(error), status: error.status
