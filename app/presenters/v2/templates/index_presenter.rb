@@ -3,8 +3,12 @@
 module V2
   module Templates
     class IndexPresenter
+      def initialize(scope)
+        @scope = scope
+      end
+
       def templates
-        Template.includes(:creator).order(name: :asc)
+        @scope.includes(:creator).order(name: :asc)
       end
 
       def destinations

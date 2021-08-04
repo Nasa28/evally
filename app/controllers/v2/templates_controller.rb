@@ -6,7 +6,7 @@ module V2
     before_action :authorize_member!, only: %i[update destroy]
 
     def index
-      presenter = V2::Templates::IndexPresenter.new
+      presenter = V2::Templates::IndexPresenter.new(templates)
 
       render json: V2::Templates::IndexView.render(presenter), status: :ok
     end
@@ -43,8 +43,12 @@ module V2
       authorize [:v2, template]
     end
 
+    def templates
+      @templates ||= current_organization.templates
+    end
+
     def template
-      @template ||= Template.find_by(id: params[:id])
+      @template ||= templates.find_by(id: params[:id])
       raise ErrorResponderService.new(:record_not_found, 404) unless @template
 
       @template

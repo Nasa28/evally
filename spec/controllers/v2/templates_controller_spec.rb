@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe V2::TemplatesController, type: :controller do
   let(:admin) { create(:user, role: 'admin') }
-  let(:evaluator) { create(:user, role: 'evaluator') }
+  let(:evaluator) { create(:user, role: 'evaluator', organization: admin.organization) }
 
   describe '#index' do
     context 'when unauthorized' do
@@ -38,7 +38,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
 
     context 'when authorized' do
       it 'responds with template' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
         FactoryBot.create(:section, sectionable: template)
 
         sign_in admin
@@ -155,7 +155,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
       end
 
       it 'responds with 403 error' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
 
         params = {
           id: template.id,
@@ -173,7 +173,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
 
     context 'when authorized' do
       it 'responds with updated template' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
         section = FactoryBot.create(:section, sectionable: template)
 
         params = {
@@ -220,7 +220,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
       end
 
       it 'responds with new section' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
         FactoryBot.create(:section, sectionable: template)
 
         params = {
@@ -249,7 +249,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
       end
 
       it 'responds without removed section' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
         section = FactoryBot.create(:section, sectionable: template)
 
         params = {
@@ -305,7 +305,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
       end
 
       it 'responds with 403 error' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
 
         sign_in evaluator
         delete :destroy, params: { id: template.id }
@@ -316,7 +316,7 @@ RSpec.describe V2::TemplatesController, type: :controller do
 
     context 'when authorized' do
       it 'responds with no content' do
-        template = FactoryBot.create(:template)
+        template = FactoryBot.create(:template, creator: admin)
         FactoryBot.create(:section, sectionable: template)
 
         sign_in admin
