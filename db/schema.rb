@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_29_132006) do
+ActiveRecord::Schema.define(version: 2021_08_04_070548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,6 +104,13 @@ ActiveRecord::Schema.define(version: 2020_11_29_132006) do
     t.index ["recipient_id"], name: "index_notifications_on_recipient_id"
   end
 
+  create_table "organizations", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_organizations_on_name", unique: true
+  end
+
   create_table "position_changes", force: :cascade do |t|
     t.string "previous_position", null: false
     t.string "current_position", null: false
@@ -186,12 +193,14 @@ ActiveRecord::Schema.define(version: 2020_11_29_132006) do
     t.integer "invitations_count", default: 0
     t.string "email_token", null: false
     t.text "signature"
+    t.bigint "organization_id", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["email_token"], name: "index_users_on_email_token"
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invitations_count"], name: "index_users_on_invitations_count"
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
     t.index ["invited_by_type", "invited_by_id"], name: "index_users_on_invited_by_type_and_invited_by_id"
+    t.index ["organization_id"], name: "index_users_on_organization_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role"], name: "index_users_on_role"
     t.index ["status"], name: "index_users_on_status"
@@ -207,4 +216,5 @@ ActiveRecord::Schema.define(version: 2020_11_29_132006) do
   add_foreign_key "position_changes", "employees"
   add_foreign_key "settings", "users"
   add_foreign_key "templates", "users", column: "creator_id"
+  add_foreign_key "users", "organizations"
 end

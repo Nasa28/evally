@@ -74,6 +74,7 @@ Rails.application.routes.draw do
 
       resource :profile, controller: 'profile', only: %i[show update] do
         put :password, on: :member
+        put :organization, on: :member
       end
 
       resource :settings, only: :update

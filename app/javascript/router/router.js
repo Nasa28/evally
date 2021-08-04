@@ -215,6 +215,11 @@ export default new Router({
               component: () => import(/* webpackChunkName: 'settings_profile' */ '@views/settings/Profile'),
             },
             {
+              path: 'organization',
+              name: 'organization_settings_path',
+              component: () => import(/* webpackChunkName: 'settings_organization' */ '@views/settings/Organization'),
+            },
+            {
               path: 'support',
               name: 'support_settings_path',
               component: () => import(/* webpackChunkName: 'settings_support' */ '@views/settings/Support'),

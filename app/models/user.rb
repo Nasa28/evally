@@ -15,6 +15,8 @@ class User < ApplicationRecord
     }
   )
 
+  belongs_to :organization
+
   has_one :setting, dependent: :destroy
 
   has_many :activities, dependent: :destroy

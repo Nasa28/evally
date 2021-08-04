@@ -4,10 +4,12 @@ import { fetchError } from '@utils/helpers'
 import i18n from '@locales/i18n'
 
 import { User } from '@models/user'
+import { Organization } from '@models/organization'
 import { Setting } from '@models/setting'
 
 const initState = () => ({
   user: new User(),
+  organization: new Organization(),
   setting: new Setting(),
   loading: false
 })
@@ -26,14 +28,18 @@ const AuthenticationModule = {
 
       localStorage.setItem('ev411y_l4ng', setting.lang || 'en')
     },
-    SET_SESSION(state, { user, setting }) {
+    SET_SESSION(state, { user, organization, setting }) {
       state.user = new User(user)
+      state.organization = new Organization(organization)
       state.setting = new Setting(setting)
 
       localStorage.setItem('ev411y_l4ng', setting.lang || 'en')
     },
     SAVE_TOKEN(_state, jwt) {
       localStorage.setItem('ev411y_t0k3n', jwt)
+    },
+    SET_ORGANIZATION(state, organization) {
+      state.organization = new Organization(organization)
     },
     SET_USER(state, user) {
       state.user = new User(user)
@@ -214,6 +220,29 @@ const AuthenticationModule = {
             { root: true }
           )
         })
+    },
+    updateOrganization({ commit }, organization) {
+      return new Promise(resolve => {
+        coreApiClient
+          .put(User.routes.profileOrganizationPath, { organization })
+          .then(response => {
+            commit('SET_ORGANIZATION', response.data)
+            commit(
+              'MessagesModule/PUSH_MESSAGE',
+              { success: i18n.t('messages.session.updateOrganization.ok') },
+              { root: true }
+            )
+
+            resolve()
+          })
+          .catch(error => {
+            commit(
+              'MessagesModule/PUSH_MESSAGE',
+              { error: i18n.t('messages.session.updateOrganization.error', { msg: fetchError(error) }) },
+              { root: true }
+            )
+          })
+      })
     },
     updatePassword({ commit }, passwords) {
       return new Promise(resolve => {

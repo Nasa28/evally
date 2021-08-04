@@ -29,7 +29,7 @@ module V2
       end
 
       def extra_params
-        { password: SecureRandom.hex }
+        { password: SecureRandom.hex, organization: @admin.organization }
       end
     end
   end

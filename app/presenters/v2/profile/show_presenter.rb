@@ -5,7 +5,7 @@ module V2
     class ShowPresenter
       attr_reader :user
 
-      delegate :setting, to: :user
+      delegate :organization, :setting, to: :user
       delegate :notifications, :unread_count, to: :notifications_presenter
 
       def initialize(user)

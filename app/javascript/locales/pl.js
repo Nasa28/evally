@@ -269,6 +269,7 @@ export default {
         general: 'Ogólne',
         notifications: 'Powiadomienia',
         profile: 'Profil',
+        organization: 'Organizacja',
         support: 'Wsparcie',
       },
       generalForm: {
@@ -289,6 +290,10 @@ export default {
       },
       notificationsForm: {
         enableUpcomingNotifications: 'Powiadom mnie o nadchodzacych ewaluacjach (każdego 1-ego dnia miesiąca)'
+      },
+      organizationForm: {
+        subtitle: 'Podstawowe Informacje',
+        name: 'Nazwa'
       },
       userForm: {
         basigInfo: 'Podstawowe informacje',
@@ -629,6 +634,10 @@ export default {
         ok: 'Hasło zostało zmienione, zaloguj się ponownie',
         error: 'Błąd przy zmianie hasła: {msg}'
       },
+      updateOrganization: {
+        ok: 'Organizacja została zaktualizowana',
+        error: 'Błąd przy aktualizacji organizacji: {msg}'
+      },
       destroy: {
         ok: 'Zostałeś wylogowany'
       }
@@ -831,6 +840,9 @@ export default {
       profile: {
         title: 'Profil',
         logOutWarning: 'Poprawna zmiana hasła spowoduje wylogowanie użytkownika',
+      },
+      organization: {
+        title: 'Organizacja'
       },
       support: {
         title: 'Pomoc',

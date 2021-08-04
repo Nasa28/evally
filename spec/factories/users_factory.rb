@@ -9,5 +9,7 @@ FactoryBot.define do
     role                 { 'admin' }
     status               { 'active' }
     signature            { nil }
+
+    organization
   end
 end

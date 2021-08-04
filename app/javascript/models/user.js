@@ -53,6 +53,7 @@ class User extends Model {
     return {
       profilePath: '/v2/profile',
       profilePasswordPath: '/v2/profile/password',
+      profileOrganizationPath: '/v2/profile/organization',
       sessionPath: '/v2/session',
       usersPath: query => `/v2/users?${getURLParams(query)}`,
       activeUsersPath: '/v2/users/active',

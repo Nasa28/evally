@@ -76,6 +76,56 @@ RSpec.describe V2::ProfileController, type: :controller do
     end
   end
 
+  describe '#organization' do
+    context 'when unauthorized' do
+      it 'responds with error' do
+        params = {
+          organization: {
+            name: 'Company X'
+          }
+        }
+
+        put :organization, params: params
+        expect(response).to have_http_status 401
+      end
+    end
+
+    context 'when authorized' do
+      it 'expects to update organization' do
+        organization = user.organization
+
+        params = {
+          organization: {
+            name: 'Company X'
+          }
+        }
+
+        sign_in user
+
+        expect do
+          put :organization, params: params
+        end.to(change { organization.reload.name }.to('Company X'))
+
+        expect(response).to have_http_status 200
+        expect(response.body).to be_json_eql organization_schema(organization)
+      end
+
+      it 'responds with error if invalid profile' do
+        params = {
+          organization: {
+            name: ''
+          }
+        }
+
+        sign_in user
+        put :organization, params: params
+
+        expect(response).to have_http_status 422
+        expect(json_response['details'].first).to eq 'Name can\'t be blank'
+      end
+    end
+  end
+
   describe '#password' do
     context 'when unauthorized' do
       it 'responds with error' do

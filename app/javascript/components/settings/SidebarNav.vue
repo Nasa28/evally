@@ -38,6 +38,18 @@
       </v-list-item-content>
     </v-list-item>
 
+    <v-list-item :to="{ name: 'organization_settings_path' }" color="primary" exact>
+      <v-list-item-action>
+        <v-icon>mdi-office-building-outline</v-icon>
+      </v-list-item-action>
+
+      <v-list-item-content>
+        <v-list-item-title>
+          {{ $t('components.settings.sidebarNav.organization') }}
+        </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+
     <v-list-item :to="{ name: 'support_settings_path' }" color="primary" exact>
       <v-list-item-action>
         <v-icon>mdi-help-rhombus-outline</v-icon>

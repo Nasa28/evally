@@ -264,6 +264,7 @@ export default {
         general: 'General',
         notifications: 'Notifications',
         profile: 'Profile',
+        organization: 'Organization',
         support: 'Support',
       },
       generalForm: {
@@ -284,6 +285,10 @@ export default {
       },
       notificationsForm: {
         enableUpcomingNotifications: 'Notify me about upcoming evaluations (every 1st of month)'
+      },
+      organizationForm: {
+        subtitle: 'Basic Organization Information',
+        name: 'Name'
       },
       userForm: {
         basicInfo: 'Basic Profile Information',
@@ -630,6 +635,10 @@ export default {
         ok: 'Password has been updated, log in again to continue',
         error: 'Password cannot be updated: {msg}'
       },
+      updateOrganization: {
+        ok: 'Organization has been updated',
+        error: 'Organization cannot be updated: {msg}'
+      },
       destroy: {
         ok: 'You have been logged out'
       }
@@ -887,6 +896,9 @@ export default {
       profile: {
         title: 'Profile',
         logOutWarning: 'You will be logged out after successful password change.',
+      },
+      organization: {
+        title: 'Organization'
       },
       support: {
         title: 'Support',

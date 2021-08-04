@@ -106,6 +106,13 @@ module JsonSpecHelpers
     }
   end
 
+  def organization_schema(organization)
+    {
+      id: organization.id,
+      name: organization.name
+    }.to_json
+  end
+
   def profile_schema(user)
     setting = user.setting
 
@@ -122,6 +129,9 @@ module JsonSpecHelpers
         last_sign_in_at: user.last_sign_in_at,
         invitation_status: user.invitation_status,
         signature: user.signature
+      },
+      organization: {
+        name: user.organization.name
       },
       setting: {
         default_draft_items: setting.default_draft_items,
