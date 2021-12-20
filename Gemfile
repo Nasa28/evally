@@ -10,7 +10,7 @@ gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 5.3.2'
 gem 'sass-rails', '~> 6.0.0'
 gem 'uglifier', '~> 4.2.0'
-gem 'webpacker', '~> 5.4.0'
+gem 'webpacker', '~> 5.4.3'
 gem 'rack-cors', '~> 1.1.1'
 gem 'bootsnap', '~> 1.4.4', require: false
 gem 'haml', '~> 5.2.1'
