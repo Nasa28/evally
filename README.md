@@ -100,7 +100,17 @@ Run Sidekiq for background jobs processing. It is important to provide data sync
 bundle exec sidekiq
 ```
 
-##### 6. Start the Rails server
+##### 6. Configure your secret key
+
+This is very important for this application to run. Run the following commands:
+
+```bash
+ rake secret
+ EDITOR="subl --wait" bin/rails credentials:edit
+```
+
+
+##### 7. Start the Rails server
 
 You can start the development rails server in the way given below:
 

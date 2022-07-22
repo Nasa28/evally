@@ -91,7 +91,8 @@ Rails.application.routes.draw do
     end
 
     # Route to hit the Vue app
-    get '/*path', to: 'pages#index', format: false
+       
+   get '/*path', to: 'pages#index', format: false
 
     # ONLY FOR ACTION MAILER PURPOSES
     resources :passwords, only: [] do

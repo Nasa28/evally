@@ -9,13 +9,15 @@ Devise.setup do |config|
     warden.default_strategies(scope: :user).unshift :jwt
   end
 
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '4cd28d3edbf077b8d8fe326e39aae11972ff3026a13205ccaaf6f9576a7b4398e4a535cfe6648bd658a28e0cb7773665aa12d33a0db6c472c7c5375cfa510b77'
+  # config.secret_key_base = 'd3b26fb4e52bdede153ce92a0d975f689b068f236983f9619721774c19be501df1fe934f56e0a1554ef056568e3df51061650823107e6c15ef98189699e9f4eb'
 
+  
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'

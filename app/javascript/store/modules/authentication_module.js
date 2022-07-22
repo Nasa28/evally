@@ -62,7 +62,7 @@ const AuthenticationModule = {
 
       modules.forEach(module => this.commit(`${module}Module/RESET_STATE`))
     }
-  },
+   },
 
   actions: {
     acceptInvitation({ commit }, data) {

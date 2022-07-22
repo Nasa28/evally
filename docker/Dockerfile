@@ -1,7 +1,7 @@
 FROM ruby:2.7.0-alpine
 
 RUN apk update && apk add build-base nodejs yarn postgresql-dev && apk add --update tzdata
-
+RUN apk add --no-cache curl
 ENV APP_HOME /app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME

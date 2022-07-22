@@ -41,7 +41,7 @@ if Rails.env.development?
       last_name: Faker::Name.last_name,
       position: "#{levels.sample}#{position.first}",
       group: position.last,
-      hired_on: Faker::Date.between(1.year.ago, Time.now)
+      hired_on: Faker::Date.between(from: 1.year.ago, to: Time.now),
     )
   end
 end

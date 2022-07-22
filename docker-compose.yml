@@ -1,11 +1,12 @@
-version: '3'
+version: '3.8'
 services:
   core_db:
     container_name: evally_core_db
     image: postgres:10.6-alpine
     volumes:
       - postgres:/var/lib/postgresql/data
-
+    # env_file:
+    #   - .env
   webpacker:
     environment:
       - RAILS_ENV=development
@@ -14,7 +15,7 @@ services:
       dockerfile: ./docker/Dockerfile
     container_name: evally_webpacker
     command: ./bin/webpack-dev-server
-    user: ${CURRENT_USER}
+    # user: ${CURRENT_USER}
     volumes:
       - .:/app
       - ./config/database.example.yml:/app/config/database.yml
@@ -22,23 +23,37 @@ services:
       - ./docker/webpacker.yml:/app/config/webpacker.yml
     ports:
       - '3035:3035'
+    # env_file:
+    #   - .env
 
-  recruitable_db:
-    container_name: evally_recruitable_db
-    image: postgres:10.6-alpine
-    volumes:
-      - postgres_recruitable:/var/lib/postgresql/data
+  # recruitable_db:
+  #   container_name: evally_recruitable_db
+  #   image: postgres:10.6-alpine
+  #   volumes:
+  #     - postgres_recruitable:/var/lib/postgresql/data
+  #   env_file:
+  #     - .env
 
-  evally_recruitable_app:
-    image: evally_recruitable_recruitable_app:latest
-    container_name: evally_recruitable_app
-    command: bin/rails s -p 3030 -b '0.0.0.0'
-    volumes:
-      - ./docker/env.example.yml:/app/config/env.yml
-    ports:
-      - '3030:3030'
-    depends_on:
-      - recruitable_db
+  # evally_recruitable_app:
+  #   environment:
+  #     - RAILS_ENV=development
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/Dockerfile
+  #   image: evally_recruitable_app:latest
+  #   container_name: evally_recruitable_app
+  #   command: bin/rails s -p 3030 -b '0.0.0.0'
+  #   volumes:
+  #     - ./docker/env.example.yml:/app/config/env.yml
+  #   ports:
+  #     - '3030:3030'
+  #   expose:
+  #     - '3030'
+
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - recruitable_db
 
   core_app:
     environment:
@@ -47,7 +62,8 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile
     container_name: evally_core_app
-    user: ${CURRENT_USER}
+    init: true
+    # user: ${CURRENT_USER}
     volumes:
       - .:/app
       - ./config/database.example.yml:/app/config/database.yml
@@ -56,6 +72,10 @@ services:
     ports:
       - '3000:3000'
       - '1025:1025'
+    expose:
+      - '3000'
+    # env_file:
+    #   - .env
     depends_on:
       - webpacker
       - core_db

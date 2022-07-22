@@ -1,7 +1,7 @@
 .git
 .dockerignore
 .byebug_history
-.env
+.env.yml
 .env.example
 log/*
 tmp/*

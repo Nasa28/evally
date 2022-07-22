@@ -6,7 +6,6 @@ module V2
 
     def show
       presenter = V2::Profile::ShowPresenter.new(current_user)
-
       render json: V2::Profile::ShowView.render(presenter), status: :ok
     end
 

@@ -124,7 +124,8 @@ module V2
     end
 
     def table_params
-      params.permit(:page, :per_page, :sort_by, :sort_dir, :search, filters: %i[group evaluator_id])
+      params.permit(:page, :format, :locale, :per_page, :sort_by, :sort_dir, :search,
+                    filters: %i[group evaluator_id])
     end
   end
 end

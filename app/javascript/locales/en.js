@@ -1,6 +1,6 @@
 export default {
   shared: {
-    general:{
+    general: {
       fields: {
         firstName: 'First name',
         lastName: 'Last name',
@@ -27,8 +27,8 @@ export default {
         description: 'Description',
         participants: 'Participants',
         recruitment: 'Recruitment',
-        stage: 'Stage'
-      }
+        stage: 'Stage',
+      },
     },
     buttons: {
       cancel: 'Cancel',
@@ -50,7 +50,7 @@ export default {
       preview: 'Preview',
       cc: 'CC',
       bcc: 'BCC',
-      assign: 'Assign'
+      assign: 'Assign',
     },
     tooltips: {
       edit: 'Edit',
@@ -78,7 +78,7 @@ export default {
       newRecruitment: 'New Recruitment',
       newAssignment: 'New Assignment',
       start: 'Start',
-      removeStage: 'Remove Stage'
+      removeStage: 'Remove Stage',
     },
     navbar: {
       dashboard: 'Dashboard',
@@ -94,8 +94,8 @@ export default {
       required: 'This field is required',
       min6: 'Must have 6 or more characters',
       isString: 'Must be a string',
-      confirmed: 'Both passwords must be the same'
-    }
+      confirmed: 'Both passwords must be the same',
+    },
   },
   components: {
     dashboard: {
@@ -112,15 +112,14 @@ export default {
       upcoming: {
         title: 'Upcoming',
         as: 'as',
-
-      }
+      },
     },
     evaluations: {
       sidebar: {
         search: 'Search ...',
         subheader: 'Evaluations In Progress',
-        subtitle: 'based on \'{name}\' template',
-        noContent: 'There are no drafts to show'
+        subtitle: "based on '{name}' template",
+        noContent: 'There are no drafts to show',
       },
       section: {
         yes: 'Yes',
@@ -128,7 +127,7 @@ export default {
       },
       deleteConfirm: {
         title: 'Delete Evaluation',
-        body: 'Are you sure you want to delete this draft evaluation?'
+        body: 'Are you sure you want to delete this draft evaluation?',
       },
       completeForm: {
         title: 'Complete Evaluation',
@@ -148,7 +147,7 @@ export default {
       staticSection: {
         yes: 'Yes',
         no: 'No',
-      }
+      },
     },
     employees: {
       table: {
@@ -165,22 +164,22 @@ export default {
           lastEvaluationOn: 'Last Evaluation Date',
           archivedOn: 'Archived Date',
           nextEvaluationOn: 'Next Evaluation Date',
-          signature: 'Signature'
-        }
+          signature: 'Signature',
+        },
       },
       deleteConfirm: {
         title: 'Delete Employee',
-        body: 'Are you sure you want to delete this employee?'
+        body: 'Are you sure you want to delete this employee?',
       },
       archiveForm: {
         title: 'Archive Employee',
         body: 'Are you sure you want to archive <strong>%{name}</strong>?',
         dateRequest: 'Please provide an archivization date: ',
-        archivedOn: 'Archivization Date'
+        archivedOn: 'Archivization Date',
       },
       restoreConfirm: {
         title: 'Restore Employee',
-        body: 'Are you sure you want to restore <strong>%{name}</strong>?'
+        body: 'Are you sure you want to restore <strong>%{name}</strong>?',
       },
       searchTable: {
         cols: {
@@ -196,7 +195,7 @@ export default {
         labels: {
           yes: 'Yes',
           no: 'No',
-        }
+        },
       },
       employeeForm: {
         createTitle: 'Create Employee',
@@ -213,7 +212,7 @@ export default {
         lastEvaluationOn: 'Last Evaluation Date',
         nextEvaluationOn: 'Next Evaluation Date',
         evaluator: 'Evaluator',
-        signature: 'Signature'
+        signature: 'Signature',
       },
       sidebar: {
         employment: 'Employment',
@@ -226,38 +225,38 @@ export default {
         archivedOn: 'Archived Date',
         completedEvaluations: {
           title: 'Completed Evaluations',
-          noContent: 'No evaluations yet'
+          noContent: 'No evaluations yet',
         },
         positionChanges: {
           title: 'Position Changes',
           previous: 'Prev: {name}',
           noContent: 'No position changes yet',
-        }
+        },
       },
       positionsChart: {
-        title: 'Employees by Positions'
+        title: 'Employees by Positions',
       },
       employeesPastYearChart: {
         title: 'Employees Changes By Months',
         hiredEmployees: 'Hired Employees',
-        archivedEmployees: 'Archived Employees'
+        archivedEmployees: 'Archived Employees',
       },
       evaluationsPastYearChart: {
         title: 'Completed Evaluations By Months',
-        completedEvaluations: 'Completed Evaluations'
+        completedEvaluations: 'Completed Evaluations',
       },
       employeesByUsersChart: {
         title: 'Employees By Users',
-        employees: 'Employees'
-      }
+        employees: 'Employees',
+      },
     },
     layout: {
       notificationsMenu: {
         title: 'Notifications',
         noNotifications: 'There is no notifications yet',
         readAll: 'Read All',
-        seeMore: 'See More'
-      }
+        seeMore: 'See More',
+      },
     },
     settings: {
       sidebarNav: {
@@ -275,45 +274,46 @@ export default {
         widgets: {
           subtitle: 'Dashboard Widgets',
           drafts: 'Number of Draft Items',
-          upcoming: 'Number of Upcoming Items'
+          upcoming: 'Number of Upcoming Items',
         },
         evaluations: {
           subtitle: 'Evaluations',
-          nextEvaluationOffset: 'Months to next evaluation'
-        }
+          nextEvaluationOffset: 'Months to next evaluation',
+        },
       },
       notificationsForm: {
-        enableUpcomingNotifications: 'Notify me about upcoming evaluations (every 1st of month)'
+        enableUpcomingNotifications:
+          'Notify me about upcoming evaluations (every 1st of month)',
       },
       userForm: {
         basicInfo: 'Basic Profile Information',
         email: 'Email',
         firstName: 'First Name',
         lastName: 'Last Name',
-        signature: 'Signature'
+        signature: 'Signature',
       },
       passwordForm: {
         subtitle: 'Change Password',
         newPassword: 'New Password',
         passwordConfirmation: 'Password Confirmation',
         password: 'Current Password',
-      }
+      },
     },
     shared: {
       searchBySkillForm: {
-        label: 'Skill'
-      }
+        label: 'Skill',
+      },
     },
     emailTemplates: {
       sidebar: {
         search: 'Search ...',
         subheader: 'Available Email Templates',
         createdBy: 'created by {name}',
-        noContent: 'There are no email templates to show'
+        noContent: 'There are no email templates to show',
       },
       deleteConfirm: {
         title: 'Delete Email Template',
-        body: 'Are you sure you want to delete this email template?'
+        body: 'Are you sure you want to delete this email template?',
       },
     },
     templates: {
@@ -321,11 +321,11 @@ export default {
         search: 'Search ...',
         subheader: 'Available Templates',
         createdBy: 'created by {name}',
-        noContent: 'There are no templates to show'
+        noContent: 'There are no templates to show',
       },
       deleteConfirm: {
         title: 'Delete Template',
-        body: 'Are you sure you want to delete this template?'
+        body: 'Are you sure you want to delete this template?',
       },
       sectionForm: {
         title: 'New Section',
@@ -343,20 +343,20 @@ export default {
         sensitive: {
           title: 'Sensitive Content',
           yes: 'Yes',
-          no: 'No'
+          no: 'No',
         },
-        button: 'Add Section'
+        button: 'Add Section',
       },
       sectionItemsList: {
         label: {
           rating: 'New Rating Item',
           bool: 'New Bool Item',
           text: 'New Text Item',
-        }
+        },
       },
       sectionComposer: {
-        title: 'Section Title'
-      }
+        title: 'Section Title',
+      },
     },
     users: {
       table: {
@@ -369,7 +369,7 @@ export default {
           latestActivity: 'Latest Activity',
           status: 'Status',
           invitationStatus: 'Invitation Status',
-        }
+        },
       },
       userForm: {
         createTitle: 'Create User',
@@ -379,8 +379,8 @@ export default {
         lastName: 'Last Name',
         role: 'Role',
         status: 'Status',
-        group: 'Group'
-      }
+        group: 'Group',
+      },
     },
     recruitments: {
       table: {
@@ -399,13 +399,13 @@ export default {
           subject: 'Subject',
           parsed: 'Parsed',
           acceptCurrentProcessing: 'CP',
-          acceptFutureProcessing: 'FP'
+          acceptFutureProcessing: 'FP',
         },
       },
       searchTable: {
         labels: {
           yes: 'Yes',
-          no: 'No'
+          no: 'No',
         },
         cols: {
           name: 'Name',
@@ -418,11 +418,11 @@ export default {
           evaluationDate: 'Evaluation Date',
           evaluatorName: 'Evaluator Name',
           acceptCurrentProcessing: 'CP',
-          acceptFutureProcessing: 'FP'
-        }
+          acceptFutureProcessing: 'FP',
+        },
       },
       assignmentForm: {
-        title: 'Recruitment Assignment'
+        title: 'Recruitment Assignment',
       },
       recruitmentForm: {
         createTitle: 'New Recruitment',
@@ -431,8 +431,10 @@ export default {
       recruitmentStatusConfirm: {
         startTitle: 'Start Recruitment',
         completeTitle: 'Complete Recruitment',
-        startBody: 'Are you sure you want to start the recruitment <strong>%{name}</strong>?',
-        completeBody: 'Are you sure you want to complete the recruitment <strong>%{name}</strong>?',
+        startBody:
+          'Are you sure you want to start the recruitment <strong>%{name}</strong>?',
+        completeBody:
+          'Are you sure you want to complete the recruitment <strong>%{name}</strong>?',
       },
       recruitDocumentForm: {
         createTitle: 'New Recruit Document',
@@ -449,48 +451,51 @@ export default {
         acceptCurrentProcessing: 'Accept for current recruitment',
         acceptFutureProcessing: 'Accept for future recruitments',
         attachments: 'Attachments',
-        socials: 'Socials'
+        socials: 'Socials',
       },
       deleteConfirm: {
         title: 'Delete Recruit Document',
-        body: 'Are you sure you want to delete the recruit <strong>%{name}</strong>?'
+        body:
+          'Are you sure you want to delete the recruit <strong>%{name}</strong>?',
       },
       deleteRecruitmentConfirm: {
         title: 'Delete Recruitment',
-        body: 'Are you sure you want to delete the recruitment <strong>%{name}</strong>?'
+        body:
+          'Are you sure you want to delete the recruitment <strong>%{name}</strong>?',
       },
       deleteRecruitmentCandidateConfirm: {
         title: 'Remove Candidate',
-        body: 'Are you sure you want to remove <strong>%{name}</strong> from the recruitment <strong>%{recruitmentName}</strong>?'
+        body:
+          'Are you sure you want to remove <strong>%{name}</strong> from the recruitment <strong>%{recruitmentName}</strong>?',
       },
       recruitmentFilePreview: {
-        label: 'Select Attached File'
+        label: 'Select Attached File',
       },
       createEvaluationForm: {
         title: 'Add Evaluation',
         selectTemplate: 'Select Template',
-        templateLabel: 'Template Name'
+        templateLabel: 'Template Name',
       },
       evaluationsSidebar: {
-        selectLabel: 'Evaluation'
+        selectLabel: 'Evaluation',
       },
       deleteAttachmentConfirm: {
         title: 'Delete Attachment',
-        body: 'Are you sure you want to delete this attachment?'
+        body: 'Are you sure you want to delete this attachment?',
       },
       deleteCommentConfirm: {
         title: 'Delete Comment',
-        body: 'Are you sure you want to delete this comment?'
+        body: 'Are you sure you want to delete this comment?',
       },
       recruitmentRow: {
         startedOn: 'started on {date}',
         completedOn: 'completed on {date}',
-        addStage: 'Add Stage'
+        addStage: 'Add Stage',
       },
       assignmentSidebar: {
         title: 'Recruitments ({n})',
         notStarted: 'not started yet',
-        startedOn: 'started on {date}'
+        startedOn: 'started on {date}',
       },
       sidebar: {
         cp: 'CP',
@@ -515,274 +520,275 @@ export default {
         message: 'Message',
         source: 'Source',
         receivedDate: 'Received Date',
-        addFile: 'Add File'
+        addFile: 'Add File',
       },
       statusChangeForm: {
-        title: 'Change Status'
-      }
-    }
+        title: 'Change Status',
+      },
+    },
   },
   messages: {
     comments: {
       create: {
         ok: 'Comment has been created',
-        error: 'Comment cannot be created: {msg}'
+        error: 'Comment cannot be created: {msg}',
       },
       update: {
         ok: 'Comment has been updated',
-        error: 'Comment cannot be updated: {msg}'
+        error: 'Comment cannot be updated: {msg}',
       },
       delete: {
         ok: 'Comment has been deleted',
-        error: 'Comment cannot be deleted: {msg}'
-      }
+        error: 'Comment cannot be deleted: {msg}',
+      },
     },
     evaluations: {
       index: {
-        error: 'Evaluation drafts cannot be loaded: {msg}'
+        error: 'Evaluation drafts cannot be loaded: {msg}',
       },
       show: {
-        error: 'Evaluation draft cannot be loaded: {msg}'
+        error: 'Evaluation draft cannot be loaded: {msg}',
       },
       create: {
         ok: 'Evaluation draft has been created',
-        error: 'Evaluation draft cannot be created: {msg}'
+        error: 'Evaluation draft cannot be created: {msg}',
       },
       update: {
         ok: 'Evaluation draft has been updated',
-        error: 'Evaluation draft cannot be updated: {msg}'
+        error: 'Evaluation draft cannot be updated: {msg}',
       },
       complete: {
         ok: 'Evaluation draft has been completed',
-        error: 'Evaluation draft cannot be completed: {msg}'
+        error: 'Evaluation draft cannot be completed: {msg}',
       },
       delete: {
         ok: 'Evaluation draft has been deleted',
-        error: 'Evaluation draft cannot be deleted: {msg}'
-      }
+        error: 'Evaluation draft cannot be deleted: {msg}',
+      },
     },
     employees: {
       index: {
-        error: 'Employees cannot be loaded: {msg}'
+        error: 'Employees cannot be loaded: {msg}',
       },
       archived: {
-        error: 'Archived employees cannot be loaded: {msg}'
+        error: 'Archived employees cannot be loaded: {msg}',
       },
       overview: {
-        error: 'Data cannot be loaded: {msg}'
+        error: 'Data cannot be loaded: {msg}',
       },
       show: {
         error: 'Employee cannot be loaded: {msg}',
-        copyLink: 'Employee\'s public link has been copied to clipboard'
+        copyLink: "Employee's public link has been copied to clipboard",
       },
       showEvaluation: {
-        error: 'Evaluation cannot be loaded: {msg}'
+        error: 'Evaluation cannot be loaded: {msg}',
       },
       create: {
         ok: 'Employee has been created',
-        error: 'Employee cannot be created: {msg}'
+        error: 'Employee cannot be created: {msg}',
       },
       update: {
         ok: 'Employee has been updated',
-        error: 'Employee cannot be updated: {msg}'
+        error: 'Employee cannot be updated: {msg}',
       },
       delete: {
         ok: 'Employee has been deleted',
-        error: 'Employee cannot be deleted: {msg}'
+        error: 'Employee cannot be deleted: {msg}',
       },
       archive: {
         ok: 'Employee has been archived',
-        error: 'Employee cannot be archived: {msg}'
+        error: 'Employee cannot be archived: {msg}',
       },
       restore: {
         ok: 'Employee has been restored',
-        error: 'Employee cannot be restored: {msg}'
-      }
+        error: 'Employee cannot be restored: {msg}',
+      },
     },
     session: {
       acceptInvitation: {
         ok: 'Your password has been saved, now you can sign in',
-        error: 'Password cannot be setup: {msg}'
+        error: 'Password cannot be setup: {msg}',
       },
       forgotPassword: {
-        ok: 'If an account exists, we will send you an instruction to reset the password'
+        ok:
+          'If an account exists, we will send you an instruction to reset the password',
       },
       resetPassword: {
         ok: 'Your password has been saved, now you can sign in',
-        error: 'Password cannot be saved: {msg}'
+        error: 'Password cannot be saved: {msg}',
       },
       show: {
-        error: 'User settings cannot be loaded: {msg}'
+        error: 'User settings cannot be loaded: {msg}',
       },
       create: {
         ok: 'You have been logged in',
-        error: 'Invalid credentials, please try again'
+        error: 'Invalid credentials, please try again',
       },
       updateSetting: {
         ok: 'Settings have been updated',
-        error: 'Settings cannot be updated: {msg}'
+        error: 'Settings cannot be updated: {msg}',
       },
       updateUser: {
         ok: 'Profile has been updated',
-        error: 'Profile cannot be updated: {msg}'
+        error: 'Profile cannot be updated: {msg}',
       },
       updatePassword: {
         ok: 'Password has been updated, log in again to continue',
-        error: 'Password cannot be updated: {msg}'
+        error: 'Password cannot be updated: {msg}',
       },
       destroy: {
-        ok: 'You have been logged out'
-      }
+        ok: 'You have been logged out',
+      },
     },
     emails: {
       form: {
-        error: 'Email form data cannot be loaded: {msg}'
+        error: 'Email form data cannot be loaded: {msg}',
       },
       send: {
         ok: 'Email has been send to {recipient}',
-        error: 'Email cannot be sent: {msg}'
-      }
+        error: 'Email cannot be sent: {msg}',
+      },
     },
     emailTemplates: {
       index: {
-        error: 'Email templates cannot be loaded: {msg}'
+        error: 'Email templates cannot be loaded: {msg}',
       },
       show: {
-        error: 'Email template cannot be loaded: {msg}'
+        error: 'Email template cannot be loaded: {msg}',
       },
       create: {
         ok: 'Email template has been created',
-        error: 'Email template cannot be created: {msg}'
+        error: 'Email template cannot be created: {msg}',
       },
       update: {
         ok: 'Email template has been updated',
-        error: 'Email template cannot be updated: {msg}'
+        error: 'Email template cannot be updated: {msg}',
       },
       delete: {
         ok: 'Email template has been deleted',
-        error: 'Email template cannot be deleted: {msg}'
-      }
+        error: 'Email template cannot be deleted: {msg}',
+      },
     },
     templates: {
       index: {
-        error: 'Templates cannot be loaded: {msg}'
+        error: 'Templates cannot be loaded: {msg}',
       },
       show: {
-        error: 'Template cannot be loaded: {msg}'
+        error: 'Template cannot be loaded: {msg}',
       },
       create: {
         ok: 'Template has been created',
-        error: 'Template cannot be created: {msg}'
+        error: 'Template cannot be created: {msg}',
       },
       update: {
         ok: 'Template has been updated',
-        error: 'Template cannot be updated: {msg}'
+        error: 'Template cannot be updated: {msg}',
       },
       delete: {
         ok: 'Template has been deleted',
-        error: 'Template cannot be deleted: {msg}'
-      }
+        error: 'Template cannot be deleted: {msg}',
+      },
     },
     users: {
       index: {
-        error: 'Users cannot be loaded: {msg}'
+        error: 'Users cannot be loaded: {msg}',
       },
       create: {
         ok: 'User has been created',
-        error: 'User cannot be created: {msg}'
+        error: 'User cannot be created: {msg}',
       },
       update: {
         ok: 'User has been updated',
-        error: 'User cannot be updated: {msg}'
-      }
+        error: 'User cannot be updated: {msg}',
+      },
     },
     recruitments: {
       index: {
-        error: 'Recruitments cannot be loaded: {msg}'
+        error: 'Recruitments cannot be loaded: {msg}',
       },
       create: {
         ok: 'Recruitment has been created',
-        error: 'Recruitment cannot be created: {msg}'
+        error: 'Recruitment cannot be created: {msg}',
       },
       start: {
         ok: 'Recruitment has been started',
-        error: 'Recruitment cannot be started: {msg}'
+        error: 'Recruitment cannot be started: {msg}',
       },
       complete: {
         ok: 'Recruitment has been completed',
-        error: 'Recruitment cannot be completed: {msg}'
+        error: 'Recruitment cannot be completed: {msg}',
       },
       update: {
         ok: 'Recruitment has been updated',
-        error: 'Recruitment cannot be updated: {msg}'
+        error: 'Recruitment cannot be updated: {msg}',
       },
       addStage: {
         ok: 'Recruitment stage has been added',
-        error: 'Recruitment stage cannot be added: {msg}'
+        error: 'Recruitment stage cannot be added: {msg}',
       },
       dropStage: {
         ok: 'Recruitment stage has been removed',
-        error: 'Recruitment stage cannot be removed: {msg}'
+        error: 'Recruitment stage cannot be removed: {msg}',
       },
       delete: {
         ok: 'Recruitment has been deleted',
-        error: 'Recruitment cannot be deleted: {msg}'
+        error: 'Recruitment cannot be deleted: {msg}',
       },
       candidates: {
         move: {
           ok: 'Candidate has been moved',
-          error: 'Candidate cannot be moved: {msg}'
+          error: 'Candidate cannot be moved: {msg}',
         },
         update: {
           ok: 'Candidate has been updated',
-          error: 'Candidate cannot be updated: {msg}'
+          error: 'Candidate cannot be updated: {msg}',
         },
         delete: {
           ok: 'Candidate has been removed from recruitment',
-          error: 'Candidate cannot be removed from recruitment: {msg}'
+          error: 'Candidate cannot be removed from recruitment: {msg}',
         },
       },
       documents: {
         index: {
-          error: 'Recruit documents cannot be loaded: {msg}'
+          error: 'Recruit documents cannot be loaded: {msg}',
         },
         show: {
           error: 'Recruit document cannot be loaded: {msg}',
           positionError: 'Position cannot be blank',
-          groupError: 'Group cannot be blank'
+          groupError: 'Group cannot be blank',
         },
         create: {
           ok: 'Recruit document has been created',
-          error: 'Recruit document cannot be created: {msg}'
+          error: 'Recruit document cannot be created: {msg}',
         },
         update: {
           ok: 'Recruit document has been updated',
-          error: 'Recruit document cannot be updated: {msg}'
+          error: 'Recruit document cannot be updated: {msg}',
         },
         assign: {
           ok: 'Candidate has been added to recruitment',
-          error: 'Candidate cannot be added to recruitment: {msg}'
+          error: 'Candidate cannot be added to recruitment: {msg}',
         },
         destroy: {
           ok: 'Recruit document has been deleted',
-          error: 'Recruit document cannot be deleted: {msg}'
-        }
+          error: 'Recruit document cannot be deleted: {msg}',
+        },
       },
       attachments: {
         upload: {
           ok: 'Attachments has been uploaded',
-          error: 'Attachments cant be uploaded: {msg}'
+          error: 'Attachments cant be uploaded: {msg}',
         },
         delete: {
           ok: 'Attachment has been deleted',
-          error: 'Attachment cannot be deleted: {msg}'
+          error: 'Attachment cannot be deleted: {msg}',
         },
       },
       inbox: {
         index: {
-          error: 'Inbox cannot be loaded: {msg}'
-        }
-      }
+          error: 'Inbox cannot be loaded: {msg}',
+        },
+      },
     },
   },
   models: {
@@ -799,28 +805,28 @@ export default {
       roles: {
         admin: 'Admin',
         recruiter: 'Recruiter',
-        evaluator: 'Evaluator'
+        evaluator: 'Evaluator',
       },
       statuses: {
         active: 'Active',
-        inactive: 'Inactive'
+        inactive: 'Inactive',
       },
       invitationStatuses: {
         pending: 'Pending',
-        accepted: 'Accepted'
-      }
-    }
+        accepted: 'Accepted',
+      },
+    },
   },
   views: {
     browser: {
       show: {
-        instruction: 'Please enter your last name to see your evaluations: '
-      }
+        instruction: 'Please enter your last name to see your evaluations: ',
+      },
     },
     dashboards: {
       show: {
         title: 'Hello {name}!',
-      }
+      },
     },
     evaluations: {
       index: {
@@ -829,7 +835,7 @@ export default {
       },
       show: {
         hiredOn: 'Hired Date',
-      }
+      },
     },
     employees: {
       index: {
@@ -843,7 +849,7 @@ export default {
       },
       show: {
         instruction: 'Select evaluation from list to see details',
-        smile: 'Keep smiling as you have nothing to do here :)'
+        smile: 'Keep smiling as you have nothing to do here :)',
       },
       evaluation: {
         hiredOn: 'Hired Date',
@@ -865,14 +871,14 @@ export default {
           evaluationsPerEmployee: 'Per Employee',
           allEvaluations: 'All Evaluations',
           evaluationsThisYear: 'Evaluations In {year}',
-          completed: 'Completed'
-        }
-      }
+          completed: 'Completed',
+        },
+      },
     },
     notifications: {
       index: {
-        title: 'Notifications'
-      }
+        title: 'Notifications',
+      },
     },
     settings: {
       show: {
@@ -882,16 +888,17 @@ export default {
         title: 'General',
       },
       notifications: {
-        title: 'Notifications'
+        title: 'Notifications',
       },
       profile: {
         title: 'Profile',
-        logOutWarning: 'You will be logged out after successful password change.',
+        logOutWarning:
+          'You will be logged out after successful password change.',
       },
       support: {
         title: 'Support',
-        text: 'Soon...'
-      }
+        text: 'Soon...',
+      },
     },
     templates: {
       index: {
@@ -899,8 +906,8 @@ export default {
         instruction: 'Select template from list or create a new one',
         nav: {
           evaluation: 'Evaluation',
-          email: 'Email'
-        }
+          email: 'Email',
+        },
       },
       show: {
         name: 'Template Name',
@@ -914,9 +921,9 @@ export default {
         autosave: {
           status: 'Autosave (every 3 min): {status}',
           success: 'Last autosave success: {datetime}',
-          failure: 'Last autosave failure: {datetime}'
-        }
-      }
+          failure: 'Last autosave failure: {datetime}',
+        },
+      },
     },
     recruitments: {
       index: {
@@ -927,27 +934,28 @@ export default {
           list: 'List',
           search: 'Search',
           overview: 'Overview',
-          inbox: 'Inbox'
-        }
+          inbox: 'Inbox',
+        },
       },
       inbox: {
-        title: 'Inbox'
+        title: 'Inbox',
       },
       show: {
-        title: 'Recruitment'
+        title: 'Recruitment',
       },
       mailer: {
         title: 'To: {to}',
-        signatureWarning: 'You have no signature yet. You can define it in your',
-        profileSettings: 'profile settings'
+        signatureWarning:
+          'You have no signature yet. You can define it in your',
+        profileSettings: 'profile settings',
       },
       overview: {
         monthSelectLabel: 'Select a Month',
         monthlyReport: 'Monthly Report',
         yearlyReport: 'Yearly Report - {year}',
         groupsChartTitle: 'Recruits By Groups',
-        sourcesChartTitle: 'Recruits By Sources'
-      }
-    }
-  }
-}
+        sourcesChartTitle: 'Recruits By Sources',
+      },
+    },
+  },
+};

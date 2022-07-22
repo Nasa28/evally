@@ -3,6 +3,11 @@
 class Employee < ApplicationRecord
   has_secure_token :public_token
 
+  # Set position_set_on to hired_on before validating/creating an employee
+  before_validation do
+    self.position_set_on = hired_on if position_set_on.blank?
+  end
+
   include PgSearch::Model
 
   pg_search_scope(
