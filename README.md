@@ -137,12 +137,12 @@ If you want to use live code reloading, or you have enough JavaScript that on-de
 docker network create evally_network --subnet 172.24.24.0/24
 ```
 
-##### 2. Create images for evally_recruitable app
+##### 2. Create images for evally_recruitable app and start the container
 
 Go to evally_recruitable project directory and run:
 
 ```bash
-docker-compose build
+docker-compose up -d --build
 ```
 
 ##### 3. Create images for evally_core app

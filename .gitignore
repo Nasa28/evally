@@ -48,3 +48,4 @@ coverage/
 yarn-debug.log*
 .yarn-integrity
 docker.env
+/docker/env.yml

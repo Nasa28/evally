@@ -43,7 +43,7 @@ module V2
     end
 
     def table_params
-      params.permit(:page, :per_page, :sort_by, :sort_dir, :search)
+      params.permit(:page, :per_page, :locale, :format, :sort_by, :sort_dir, :search)
     end
   end
 end
